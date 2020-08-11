@@ -20,21 +20,25 @@
                     });                    
                 }
             });
+            
         </script>
     </head>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false;">
+            
         	<a-assets>
         		<a-asset-item id='controlobj' src='model/control/Controller.obj'></a-asset-item>
         		<a-asset-item id='controlmtl' src='model/control/controller.mtl'></a-asset-item>
         	</a-assets>
+            
             <a-marker type="pattern" url='marker/elgato.patt' registerevents>
-                <a-box id="Caja1" position='0 0 0' scale="0.6 0.6 0.6" material='opacity: 0.5; side: double;color:green;' clicked>
+                <a-box id="Caja1" position='0 0 0' scale="0.6 0.6 0.6" material='opacity: 0.5; side: double;color:green;'>
                     <a-torus-knot radius='0.26' radius-tubular='0.05'
                         animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true">
                     </a-torus-knot>
                 </a-box>
             </a-marker>
+            
             <a-marker type='pattern' url='marker/things.patt'>
             	<a-entity obj-model='obj: #controlobj; mtl: #controlmtl' scale="0.08 -0.08 0.08" rotation="180 0 0"></a-entity>
             </a-marker>
