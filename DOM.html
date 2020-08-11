@@ -63,8 +63,8 @@
         gesture-detector
         id='scene'>
         	<a-assets>
-        		<a-asset-item id='pokeobj' src='obj/control/Controller.obj'></a-asset-item>
-        		<a-asset-item id='pokemtl' src='obj/control/Controller.mtl'></a-asset-item>
+        		<a-asset-item id='controlobj' src='model/control/Controller.obj'></a-asset-item>
+        		<a-asset-item id='controlmtl' src='model/control/controller.mtl'></a-asset-item>
         	</a-assets>
 
             <a-marker type="pattern" url="marker/elgato.patt" registerevents >
@@ -78,7 +78,7 @@
             <a-marker type='pattern' url='marker/things.patt' raycaster="objects: .clickable"
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;">
-            	<a-entity obj-model='obj: #pokeobj; mtl: #pokemtl' scale="0.08 -0.08 0.08" rotation="180 0 0" class="clickable"
+            	<a-entity obj-model='obj: #controlobj; mtl: #controlmtl' scale="0.08 -0.08 0.08" rotation="180 0 0" class="clickable"
       gesture-handler="minScale: 0.25; maxScale: 10"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
